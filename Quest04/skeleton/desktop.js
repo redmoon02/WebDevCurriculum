@@ -1,15 +1,47 @@
 class Desktop {
-	/* TODO: Desktop 클래스는 어떤 멤버함수와 멤버변수를 가져야 할까요? */
-};
+    constructor() {
+        this.icons = [];
+        this.windows = [];
+    }
+
+    addIcon(icon) {
+        this.icons.push(icon);
+    }
+
+    openWindow(window) {
+        this.windows.push(window);
+    }
+}
 
 class Icon {
-	/* TODO: Icon 클래스는 어떤 멤버함수와 멤버변수를 가져야 할까요? */
-};
+    constructor(name, position) {
+        this.name = name;
+        this.position = position;
+    }
+}
 
 class Folder {
-	/* TODO: Folder 클래스는 어떤 멤버함수와 멤버변수를 가져야 할까요? */
-};
+    constructor(name, position) {
+        this.name = name;
+        this.position = position;
+        this.files = [];
+    }
+
+    addFile(file) {
+        this.files.push(file);
+    }
+}
 
 class Window {
-	/* TODO: Window 클래스는 어떤 멤버함수와 멤버변수를 가져야 할까요? */
-};
+    constructor(title, position, size) {
+        this.title = title;
+        this.position = position;
+        this.size = size;
+        this.content = '';
+    }
+
+    setContent(content) {
+        this.content = content;
+    }
+}
+

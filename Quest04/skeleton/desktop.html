@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="kor">
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="./desktop.css">
 		<script src="./desktop.js"></script>
+		<script src="./test.js"></script>
+		<title>바탕화면</title>
 	</head>
 	<body>
 		<section class="desktop">
+			<div>
+				
+			</div>
 		</section>
 
 		<script>
-			let myDesktop = new Desktop(
-				/* TODO: myDesktop 인스턴스의 생성자의 변수로 무엇이 들어가야 할까요? */
-			);
+		const myDesktop = new Desktop();
+
+		function addIcon() {
+			const iconName = prompt("아이콘 이름을 입력하세요:");
+			if (iconName) {
+			const icon = new Icon(iconName);
+			myDesktop.addIcon(icon);
+			//아이콘 만들기 로직 추가 예정 자바에서 만들거나 여기에서 만들거나 
+		
+		}
+		}
+
+
+		const addButton = document.createElement("button");
+		addButton.textContent = "아이콘 추가";
+		addButton.addEventListener("click", addIcon);
+		document.body.appendChild(addButton);
 		</script>
 	</body>
 </html>
